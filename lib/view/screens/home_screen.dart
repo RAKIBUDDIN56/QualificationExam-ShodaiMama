@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:shodai_mama/constants/http_service/http_service.dart';
 import 'package:shodai_mama/controller/item_controller.dart';
 import 'package:shodai_mama/model/item_model.dart';
+import 'package:shodai_mama/view/screens/item_details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -107,9 +108,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         itemBuilder: (_, index) => Card(
                           margin: const EdgeInsets.symmetric(
                               vertical: 8, horizontal: 10),
-                          child: ListTile(
-                            title: Text(provider.itemList[index].id),
-                            subtitle: Text(provider.itemList[index].author),
+                          child: GestureDetector(
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => DetailsScreen(
+                                        provider.itemList[index]))),
+                            child: ListTile(
+                              title: Text(provider.itemList[index].id),
+                              trailing: Text(provider.itemList[index].author),
+                            ),
                           ),
                         ),
                       ),
@@ -118,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     // when the _loadMore function is running
                     if (_isLoadMoreRunning == true)
                       const Padding(
-                        padding: const EdgeInsets.only(top: 10, bottom: 40),
+                        padding: EdgeInsets.only(top: 10, bottom: 40),
                         child: Center(
                           child: CircularProgressIndicator(),
                         ),
