@@ -5,12 +5,13 @@ class ItemProvider extends ChangeNotifier {
   bool isFirstLoadRunning = false;
 
   List<ItemModel> itemList = [];
-
+//method to get itemList
   void updateItemList(List<ItemModel> list) {
     itemList = list;
     notifyListeners();
   }
 
+//mothod  to get more loaded items
   void updateLoadMoreItemList(List<ItemModel> list) {
     itemList.addAll(list);
     notifyListeners();
