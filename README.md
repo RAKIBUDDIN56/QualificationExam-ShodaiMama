@@ -1,16 +1,15 @@
 # shodai_mama
 
-A new Flutter project.
+Qualification Exam @ShodaiMama
 
-## Getting Started
+App displays a list of items from https://picsum.photos/v2/list?page=pageNumber&limit=20 with infinite scrolling 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![1st](https://user-images.githubusercontent.com/52502582/158220693-7d48371f-91ac-48c6-9e8a-8c53e3cdc227.png)
+![2nd](https://user-images.githubusercontent.com/52502582/158220712-ae70b9c5-604e-4d8a-bef0-f188354dd0ba.png)
+![3rd](https://user-images.githubusercontent.com/52502582/158220719-ad9e0f14-7446-431e-a2a3-1b9beaf3fd23.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
